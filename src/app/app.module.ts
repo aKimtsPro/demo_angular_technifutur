@@ -5,11 +5,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DemoBindingComponent } from './components/demo-binding/demo-binding.component';
+import { ExoBindingComponent } from './components/exo-binding/exo-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoBindingComponent
+    DemoBindingComponent,
+    ExoBindingComponent
   ],
   imports: [
     BrowserModule,
