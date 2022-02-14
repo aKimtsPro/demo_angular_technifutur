@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { ExoBindingComponent } from './exo-binding/exo-binding.component';
 import { FormsModule } from '@angular/forms';
 import { ExoRoutingModule } from './exo-routing.module';
+import { ExoComponent } from './exo.component';
 
 
 
 @NgModule({
   declarations: [
-    ExoBindingComponent
+    ExoBindingComponent,
+    ExoComponent
   ],
   imports: [
     CommonModule,
