@@ -1,0 +1,11 @@
+<h2>Les pipes</h2>
+
+<p>Les pipes permettent de transformer un info en une autre dans le template:</p>
+
+<p>par exemple trois dollars : <span> {{ (3.949846545431 | currency:'EUR':'symbol') | json }} </span></p>
+
+<p> Date: {{ date | date:'dd-MM-YYYY' }}</p>
+
+
+<p> {{ voiture | voitureFormat:(voiture.puissance >= 100) }} </p>
+<p> {{ voiture | voitureFormat }} </p>

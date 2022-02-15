@@ -18,9 +18,7 @@ import { Page404Component } from './components/page404/page404.component';
     AppRoutingModule,
     FormsModule
   ],
-  exports: [
-    AppComponent
-  ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

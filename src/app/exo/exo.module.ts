@@ -4,18 +4,22 @@ import { ExoBindingComponent } from './exo-binding/exo-binding.component';
 import { FormsModule } from '@angular/forms';
 import { ExoRoutingModule } from './exo-routing.module';
 import { ExoComponent } from './exo.component';
+import { ExoChronoComponent } from './components/exo-chrono/exo-chrono.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
 @NgModule({
   declarations: [
     ExoBindingComponent,
-    ExoComponent
+    ExoComponent,
+    ExoChronoComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    ExoRoutingModule
+    ExoRoutingModule,
+    SharedModule
   ]
 })
 export class ExoModule { }

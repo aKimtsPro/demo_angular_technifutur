@@ -3,8 +3,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DemoComponent } from './demo.component';
 import { DemoBindingComponent } from './demo-binding/demo-binding.component';
-import { D2Component } from './d2/d2.component';
 import { DemoRoutingModule } from './demo-routing.module';
+import { DemoPipeComponent } from './demo-pipe/demo-pipe.component';
+import { NavComponent } from './nav/nav.component';
+import { AppModule } from '../app.module';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -12,12 +15,14 @@ import { DemoRoutingModule } from './demo-routing.module';
   declarations: [
     DemoComponent,
     DemoBindingComponent,
-    D2Component
+    DemoPipeComponent,
+    NavComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
-    DemoRoutingModule
+    DemoRoutingModule,
+    SharedModule
   ]
 })
 export class DemoModule { }
