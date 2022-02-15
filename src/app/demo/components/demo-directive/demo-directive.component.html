@@ -1,0 +1,75 @@
+<h3>Les directives</h3>
+
+<h4>Component directives</h4>
+
+<h5>ngStyle</h5>
+
+<div>
+    <p [ngStyle]="{ color: color, 'background-color': bgColor }">test</p>
+</div>
+
+<div>
+    <p>color</p>
+    <input type="radio" name="color" value="black" [(ngModel)]="color"> noir
+    <input type="radio" name="color" value="white" [(ngModel)]="color"> blanc
+    <input type="radio" name="color" value="red" [(ngModel)]="color"> red
+</div>
+
+<div>
+    <p>background</p>
+    <input type="radio" name="bg-color" value="red" [(ngModel)]="bgColor"> red
+    <input type="radio" name="bg-color" value="blue" [(ngModel)]="bgColor"> blue
+</div>
+
+<h5>ngClass</h5>
+
+<div>
+    <p [ngClass]="{ negative: numberInput < 0, 'too-big': numberInput < -2 }">test</p>
+</div>
+
+<input type="number" [(ngModel)]="numberInput">
+
+<h5>ngModel</h5>
+
+<p>vous savez deja</p>
+
+<h4>Structural directives</h4>
+
+<h5>ngIf</h5>
+
+<button (click)="toggleDisplay()"> {{ displayed ? 'cacher' : 'afficher' }} </button>
+
+<div *ngIf="displayed; else div_container">
+    <p>secret</p>
+</div>
+
+<!-- le ng-template pourrait etre n'importe ou dans ce fichier -->
+<ng-template #div_container>
+    <div>
+        <p>sinon</p>
+    </div>
+</ng-template>
+
+<div [hidden]="!displayed">
+    <p>secret</p>
+</div>
+
+<h5>ngFor</h5>
+
+<ul>
+    <ng-container *ngFor="let fruit of tabFruit; let i = index">
+        <li *ngIf="fruit.charAt(0) != 'p'"> {{i}} - {{ fruit }} </li>
+    </ng-container>
+</ul>
+
+
+<h5>ngSwitch</h5>
+
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'black'">la couleur est noire</div>
+    <div *ngSwitchCase="'white'">la couleur est blanche</div>
+    <div *ngSwitchDefault>c'est ni l'un ni l'autre</div>
+</div>
+
+<h4>Custom directives</h4>
+

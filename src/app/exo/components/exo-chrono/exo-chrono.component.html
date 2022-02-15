@@ -1,5 +1,12 @@
-<p>{{ chrono | chrono }}</p>
+<h2>Exo chronometre</h2>
 
-<button (click)="play()">play</button>
-<button (click)="play()">pause</button>
-<button (click)="play()">reset</button>
+<p>{{ chrono | chrono:format }}</p>
+<button (click)="play()" [disabled]="interval">play</button>
+<button (click)="pause()" [disabled]="!interval">pause</button>
+<button (click)="reset()" [disabled]="!canReset()">reset</button>
+
+<br>
+
+<input type="radio" value="small" [(ngModel)]="format"> small <br>
+<input type="radio" value="mid" [(ngModel)]="format"> mid <br>
+<input type="radio" value="long" [(ngModel)]="format"> long

@@ -7,16 +7,20 @@ import { Chrono } from 'src/app/models/chrono.model';
 })
 export class ChronoPipe implements PipeTransform {
 
-  transform(value: Chrono, version: 'smol'|'mid'|'long' = 'mid'): string {
-    
-    switch(version){
-      case 'smol':
-        return value.minute + ":" + value.seconde;
+  transform(value: Chrono, format:'small'|'mid'|'long' = 'mid'): string {
+    const minute = value.minute < 10 ? '0'+value.minute : value.minute ;
+    const seconde = value.seconde < 10 ? '0'+value.seconde : value.seconde ;
+
+    switch(format){
+      case 'small':
+        return minute+":"+seconde;
       case 'mid':
-        return value.minute + "m" + value.seconde + "s";  
+        return minute+" m "+seconde+ " s";
       case 'long':
-        return value.minute + " minutes et " + value.seconde + "secondes";
+        return minute+" minutes et "+seconde+ " secondes";
     }
+
+    
   }
 
 }
