@@ -1,0 +1,15 @@
+.indispo {
+    background-color: rgb(240, 163, 163);
+}
+
+.few-stock {
+    color: rgb(145, 135, 45);
+}
+
+.much-stock {
+    color: rgb(56, 161, 56);
+}
+
+.no-stock {
+    color: rgb(136, 32, 32);
+}

@@ -1,4 +1,5 @@
-import { Validators } from "@angular/forms";
+import { AbstractControlOptions, Validators } from "@angular/forms";
+import { of } from "rxjs";
 
 export const PRODUIT_INSERT_FORM = {
     id: ['', Validators.required],
@@ -7,3 +8,5 @@ export const PRODUIT_INSERT_FORM = {
     prix: [0, [Validators.required, Validators.min(0)]],
     stock: [1, Validators.min(0)]
 }
+
+

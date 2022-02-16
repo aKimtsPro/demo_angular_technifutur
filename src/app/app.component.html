@@ -1,11 +1,6 @@
-<h1> Bienvenu sur mon site: {{ title + " le titre" }} {{ 1+1 }} </h1>
+<app-header [title]="title"></app-header>
 
-<nav>
-    <a routerLink="/demo">demo</a><br>
-    <a routerLink="/exo">exo</a>
-</nav>
-
-<div>
+<div class="container">
     <router-outlet></router-outlet>
 </div>
 

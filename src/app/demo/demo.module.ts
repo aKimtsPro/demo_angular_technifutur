@@ -8,6 +8,10 @@ import { DemoDirectiveComponent } from './components/demo-directive/demo-directi
 import { DemoBindingComponent } from './components/demo-binding/demo-binding.component';
 import { DemoPipeComponent } from './components/demo-pipe/demo-pipe.component';
 import { NavComponent } from './components/nav/nav.component';
+import { HighlightDirective } from './directives/highlight.directive';
+import { GreenBgDirective } from './directives/green-bg.directive';
+import { DemoCommuComponent } from './components/demo-commu/demo-commu.component';
+import { DemoCommuEnfantComponent } from './components/demo-commu-enfant/demo-commu-enfant.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +19,11 @@ import { NavComponent } from './components/nav/nav.component';
     DemoBindingComponent,
     DemoPipeComponent,
     NavComponent,
-    DemoDirectiveComponent
+    DemoDirectiveComponent,
+    HighlightDirective,
+    GreenBgDirective,
+    DemoCommuComponent,
+    DemoCommuEnfantComponent
   ],
   imports: [
     CommonModule,

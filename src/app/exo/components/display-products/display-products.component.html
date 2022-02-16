@@ -1,0 +1,40 @@
+<h3>Listes de produits</h3>
+
+<div id="product-list">
+
+    <div id="product-list-menu">
+
+        <label for="sorting-method">tri:</label>
+        <select id="sorting-method" [(ngModel)]="sortingMethod">
+            <option [value]="undefined">pas de tri</option>
+            <option value="marque">par marque</option>
+            <option value="prix">par prix</option>
+            <option value="stock">par stock</option>
+        </select>
+        
+        <input type="checkbox" id="asc-input" [(ngModel)]="asc">
+        <label for="asc-input">asc</label>
+
+        <input type="checkbox" id="show-no-sale" [(ngModel)]="showNoSale">
+        <label for="show-no-sale">afficher les non en vente</label>
+    </div>
+
+    <ng-container *ngFor="let item of products | sortProduit:sortingMethod:asc; let i=index">
+        <div class="product-item"[ngClass]="{ indispo: !item.en_vente }" *ngIf="showNoSale || item.en_vente">
+            <p> <span>marque: {{ item.marque }} </span> - <span *ngIf="item.modele" >modele: {{ item.modele }} </span>  </p>
+            <p> 
+                <span>prix: {{item.prix}} </span> - 
+                <span [ngClass]="{
+                        'no-stock': item.stock <= 0 ,
+                        'few-stock': item.stock < 5 && item.stock >= 0, 
+                        'much-stock': item.stock >= 5
+                    }">
+                    stock: {{ item.stock <= 0 ? 'indisponible' : item.stock }} 
+                </span> 
+            </p>
+            <button (click)="onDelete(i)">supprimer</button>
+            <button (click)="onToggleEnVente(item)">{{ item.en_vente ? 'retirer de la vente' : 'mettre en vente' }}</button>
+        </div>
+    </ng-container>
+    
+</div>
