@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExoParentComponent implements OnInit {
 
+  redAbove = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickedSquare(){
+    this.redAbove = !this.redAbove;
   }
 
 }

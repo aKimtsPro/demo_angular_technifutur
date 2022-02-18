@@ -5,6 +5,7 @@ import { ExoChronoComponent } from './components/exo-chrono/exo-chrono.component
 import { ExoBindingComponent } from './components/exo-binding/exo-binding.component';
 import { ExoComponent } from './exo.component';
 import { ExoParentComponent } from './components/exo-parent/exo-parent.component';
+import { CustomDirComponent } from './components/custom-dir/custom-dir.component';
 
 const routes: Routes = [
     { path: "", component: ExoComponent, children: [
@@ -12,6 +13,7 @@ const routes: Routes = [
         { path:"chrono", component:ExoChronoComponent },
         { path:"products", component: DisplayProductsComponent },
         { path:"commu", component: ExoParentComponent },
+        { path:"custom-dir", component: CustomDirComponent}
     ]}
 ];
 

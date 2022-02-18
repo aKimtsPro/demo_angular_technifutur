@@ -46,7 +46,7 @@
 <!-- le ng-template pourrait etre n'importe ou dans ce fichier -->
 <ng-template #div_container>
     <div>
-        <p>sinon</p>
+        <p style-bg-green>sinon</p>
     </div>
 </ng-template>
 
@@ -75,5 +75,5 @@
 
 <p>Lorem ipsum <span appHighlight="red" [black-text]="false">dolor</span> sit amet.</p>
 
-<p style-bg-green appHighlight="red">Lorem, ipsum.</p>
+<p  (style-bg-green)="onColorSwapped($event)">Lorem, ipsum.</p>
 

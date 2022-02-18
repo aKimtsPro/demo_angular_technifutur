@@ -34,4 +34,10 @@ export class DemoDirectiveComponent implements OnInit {
     this.displayed = !this.displayed;
   }
 
+  onColorSwapped(color: string){
+    console.log(color)
+
+  }
+  
+
 }

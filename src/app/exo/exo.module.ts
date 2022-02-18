@@ -10,6 +10,10 @@ import { DisplayProductsComponent } from './components/display-products/display-
 import { SortProduitPipe } from './pipes/filter-produit.pipe';
 import { ExoParentComponent } from './components/exo-parent/exo-parent.component';
 import { ExoEnfantComponent } from './components/exo-parent/exo-enfant/exo-enfant.component';
+import { ExoEnfantDeuxComponent } from './components/exo-parent/exo-enfant-deux/exo-enfant-deux.component';
+import { ChildTextDirective } from './directives/child-text.directive';
+import { CustomDirComponent } from './components/custom-dir/custom-dir.component';
+import { NavComponent } from './components/nav/nav.component';
 
 
 
@@ -21,7 +25,11 @@ import { ExoEnfantComponent } from './components/exo-parent/exo-enfant/exo-enfan
     DisplayProductsComponent,
     SortProduitPipe,
     ExoParentComponent,
-    ExoEnfantComponent
+    ExoEnfantComponent,
+    ExoEnfantDeuxComponent,
+    ChildTextDirective,
+    CustomDirComponent,
+    NavComponent
   ],
   imports: [
     CommonModule,
