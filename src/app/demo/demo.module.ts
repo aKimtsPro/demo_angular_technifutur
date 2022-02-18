@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DemoComponent } from './demo.component';
 import { DemoRoutingModule } from './demo-routing.module';
 import { SharedModule } from '../shared/shared.module';
@@ -12,6 +12,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { GreenBgDirective } from './directives/green-bg.directive';
 import { DemoCommuComponent } from './components/demo-commu/demo-commu.component';
 import { DemoCommuEnfantComponent } from './components/demo-commu-enfant/demo-commu-enfant.component';
+import { DemoFormsComponent } from './components/demo-forms/demo-forms.component';
 
 @NgModule({
   declarations: [
@@ -23,13 +24,15 @@ import { DemoCommuEnfantComponent } from './components/demo-commu-enfant/demo-co
     HighlightDirective,
     GreenBgDirective,
     DemoCommuComponent,
-    DemoCommuEnfantComponent
+    DemoCommuEnfantComponent,
+    DemoFormsComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     DemoRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class DemoModule { }

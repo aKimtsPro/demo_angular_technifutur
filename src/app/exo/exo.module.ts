@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ExoBindingComponent } from './components/exo-binding/exo-binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ExoRoutingModule } from './exo-routing.module';
 import { ExoComponent } from './exo.component';
 import { ExoChronoComponent } from './components/exo-chrono/exo-chrono.component';
@@ -15,6 +15,7 @@ import { ChildTextDirective } from './directives/child-text.directive';
 import { CustomDirComponent } from './components/custom-dir/custom-dir.component';
 import { NavComponent } from './components/nav/nav.component';
 import { CompoInputComponent } from './components/compo-input/compo-input.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 
 
@@ -31,13 +32,15 @@ import { CompoInputComponent } from './components/compo-input/compo-input.compon
     ChildTextDirective,
     CustomDirComponent,
     NavComponent,
-    CompoInputComponent
+    CompoInputComponent,
+    FormsComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ExoRoutingModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule
   ]
 })
 export class ExoModule { }

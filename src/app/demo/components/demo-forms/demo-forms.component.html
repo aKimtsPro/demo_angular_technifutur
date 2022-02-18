@@ -1,0 +1,19 @@
+
+
+<h3>Les formulaire réactifs</h3>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <div>
+        <label for="input-nom">nom :</label>
+        <input type="text" id="input-nom" formControlName="nom">
+    </div>
+
+    <div>
+        <label for="input-age">age :</label>
+        <input type="number" id="input-age" formControlName="age">
+    </div>
+    
+    <button type="submit">envoyer</button>
+
+</form>
