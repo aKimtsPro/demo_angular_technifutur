@@ -1,0 +1,11 @@
+form {
+    padding: 10px;
+}
+
+form.ng-untouched {
+    background-color: rgb(193, 221, 177);
+}
+
+input.ng-dirty {
+    border: 10px solid rgb(98, 134, 192);
+}

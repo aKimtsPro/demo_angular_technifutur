@@ -18,4 +18,10 @@ export class FormsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    const message = "nom: "+ this.produitForm.value.nom+ " | prix: "+ this.produitForm.value.prix;
+    // const m = `nom : ${this.produitForm.value.nom} | prix: ${this.produitForm.value.prix}`
+    alert(message);
+  }
+
 }

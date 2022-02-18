@@ -1,16 +1,16 @@
 
 <h3>Exo formulaires réactifs</h3>
 
-<form>
+<form [formGroup]="produitForm" (ngSubmit)="onSubmit()">
 
     <div>
         <label for="input-nom">nom</label><br>
-        <input type="text" id="input-nom">
+        <input type="text" id="input-nom" formControlName="nom">
     </div>
 
     <div>
         <label for="input-prix">prix</label><br>
-        <input type="number" id="input-prix">
+        <input type="number" id="input-prix" formControlName="prix">
     </div>
 
     <button type="submit">envoyer</button>
