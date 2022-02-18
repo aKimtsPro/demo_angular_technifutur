@@ -14,6 +14,7 @@ import { ExoEnfantDeuxComponent } from './components/exo-parent/exo-enfant-deux/
 import { ChildTextDirective } from './directives/child-text.directive';
 import { CustomDirComponent } from './components/custom-dir/custom-dir.component';
 import { NavComponent } from './components/nav/nav.component';
+import { CompoInputComponent } from './components/compo-input/compo-input.component';
 
 
 
@@ -29,7 +30,8 @@ import { NavComponent } from './components/nav/nav.component';
     ExoEnfantDeuxComponent,
     ChildTextDirective,
     CustomDirComponent,
-    NavComponent
+    NavComponent,
+    CompoInputComponent
   ],
   imports: [
     CommonModule,

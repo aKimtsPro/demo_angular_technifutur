@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: 'Roboto';
+}
+
+.nav-rack {
+    display: flex;
+}
+
+.nav-link {
+    margin: 0 10px;
+    white-space: nowrap;
+}
+
+.nav-link > a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link > a:hover {
+    color: rgb(165, 165, 125);
+}

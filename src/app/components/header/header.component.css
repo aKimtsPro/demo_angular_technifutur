@@ -1,7 +1,9 @@
-nav {
-    display: flex;
+header {
+    background-color: burlywood;
+    padding: 5px;
 }
 
-.nav-link {
-    margin: 0 10px;
+header > h1,h2 {
+    margin: 0;
 }
+

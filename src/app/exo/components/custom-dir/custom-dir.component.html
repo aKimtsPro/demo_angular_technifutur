@@ -1,9 +1,13 @@
 <h3>Les directives customs : </h3>
 
-<p child-text="premier"></p>
+<div>
+    <p>nombre d'élément créés: {{ elementCreated }}</p>
+</div>
 
-<div child-text="second"></div>
+<p child-text="premier" (element-created)="onElementCreated()"></p>
 
-<h4 [child-text]="'trois'+'ieme'" ></h4>
+<div child-text="second" (element-created)="onElementCreated()"></div>
 
-<div child-text></div>
+<h4 [child-text]="'trois'+'ieme'" (element-created)="onElementCreated()"></h4>
+
+<div child-text (element-created)="onElementCreated()"></div>

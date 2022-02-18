@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-custom-dir',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomDirComponent implements OnInit {
 
-  constructor() { }
+  elementCreated = 0;
+
+  constructor(private cdref: ChangeDetectorRef) { }
 
   ngOnInit(): void {
   }
+
+  onElementCreated(){
+    this.elementCreated++;
+    this.cdref.detectChanges();
+  }
+
 
 }

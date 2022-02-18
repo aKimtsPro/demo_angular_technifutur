@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-exo-enfant-deux',
@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExoEnfantDeuxComponent implements OnInit {
 
+  @Output('clicked-square')
+  emitter = new EventEmitter();
+
+  @Input()
+  isRedAbove: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  clickSquare(){
+    this.emitter.emit();
   }
 
 }
