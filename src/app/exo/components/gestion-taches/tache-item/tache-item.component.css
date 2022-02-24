@@ -1,0 +1,27 @@
+.tache-item{
+    padding: 5px;
+    margin-top: 5px;
+    text-align: center;
+    display: flex;
+}
+
+.tache-item > button {
+    width: 20%;
+}
+
+.tache-item > p {
+    width: 60%;
+}
+
+
+.task-up {
+    background-color: rgb(120, 221, 120);
+}
+
+.task-down {
+    background-color: rgb(204, 118, 118);
+}
+
+button:disabled {
+    background-color: rgb(243, 243, 194)
+}

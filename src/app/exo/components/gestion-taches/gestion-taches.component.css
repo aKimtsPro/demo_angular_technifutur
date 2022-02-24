@@ -1,0 +1,10 @@
+#create-tache {
+    width: 400px;
+}
+
+#task-mngment-container {
+    margin-top: 30px;
+    width: 400px;
+    padding: 10px;
+    background-color: rgb(80, 139, 139);
+}

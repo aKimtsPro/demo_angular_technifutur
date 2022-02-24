@@ -1,0 +1,17 @@
+<div id="tache-creation-container">
+
+    <div id="tache-creation-input-rack">
+        <label for="tache-nom">Nom de la tache:</label><br>
+        <div>
+            <input type="text" id="tache-nom" [(ngModel)]="tacheNom">
+            <input type="color" id="tache-color" [(ngModel)]="colorTache">
+        </div>
+        
+    </div>
+
+    <div id="tache-creation-btn-rack">
+        <button (click)="onAdd(true)" [disabled]="!canAdd()">début</button>
+        <button (click)="onAdd(false)" [disabled]="!canAdd()">fin</button>
+    </div>
+
+</div>

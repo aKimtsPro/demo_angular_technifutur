@@ -1,0 +1,28 @@
+#tache-creation-container {
+    display: flex;
+    padding: 10px;
+    background-color: orange;
+}
+
+#tache-creation-input-rack {
+    width: 80%;
+    margin-right: 10px;
+}
+
+#tache-nom {
+    width: calc(100% - 40px);
+    height: 30px;
+}
+
+#tache-color {
+    height: 30px;
+    width: 30px;
+    padding: 1px 3px;
+}
+
+#tache-creation-btn-rack {
+    width: 20%;
+}
+#tache-creation-btn-rack > button {
+    width: 100%;
+}

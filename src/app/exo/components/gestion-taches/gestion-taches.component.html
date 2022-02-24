@@ -1,0 +1,18 @@
+
+<div id="task-mngment-container">
+    <h3>Gestion de taches</h3>
+
+    <div id="create-tache">
+        <app-creer-tache (add)="onAdd($event)"></app-creer-tache>
+    </div>
+
+    <div id="show-tache">
+        <app-tache-item 
+            *ngFor="let tache of listTache; let i=index" 
+            [tache]="tache" 
+            [first]="i === 0"
+            [last]="i === listTache.length-1"
+            (move)="onTaskMove(i, $event)">
+        </app-tache-item>
+    </div>
+</div>

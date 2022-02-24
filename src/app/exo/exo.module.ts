@@ -16,6 +16,9 @@ import { CustomDirComponent } from './components/custom-dir/custom-dir.component
 import { NavComponent } from './components/nav/nav.component';
 import { CompoInputComponent } from './components/compo-input/compo-input.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { GestionTachesComponent } from './components/gestion-taches/gestion-taches.component';
+import { CreerTacheComponent } from './components/gestion-taches/creer-tache/creer-tache.component';
+import { TacheItemComponent } from './components/gestion-taches/tache-item/tache-item.component';
 
 
 
@@ -33,7 +36,10 @@ import { FormsComponent } from './components/forms/forms.component';
     CustomDirComponent,
     NavComponent,
     CompoInputComponent,
-    FormsComponent
+    FormsComponent,
+    GestionTachesComponent,
+    CreerTacheComponent,
+    TacheItemComponent
   ],
   imports: [
     CommonModule,

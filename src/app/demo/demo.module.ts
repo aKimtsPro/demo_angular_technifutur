@@ -13,6 +13,10 @@ import { GreenBgDirective } from './directives/green-bg.directive';
 import { DemoCommuComponent } from './components/demo-commu/demo-commu.component';
 import { DemoCommuEnfantComponent } from './components/demo-commu-enfant/demo-commu-enfant.component';
 import { DemoFormsComponent } from './components/demo-forms/demo-forms.component';
+import { ProduitsComponent } from './components/produits/produits.component';
+import { InsertProduitFormComponent } from './components/produits/insert-produit-form/insert-produit-form.component';
+import { ListProduitsComponent } from './components/produits/list-produits/list-produits.component';
+import { ListProduitsItemComponent } from './components/produits/list-produits/list-produits-item/list-produits-item.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { DemoFormsComponent } from './components/demo-forms/demo-forms.component
     GreenBgDirective,
     DemoCommuComponent,
     DemoCommuEnfantComponent,
-    DemoFormsComponent
+    DemoFormsComponent,
+    ProduitsComponent,
+    InsertProduitFormComponent,
+    ListProduitsComponent,
+    ListProduitsItemComponent
   ],
   imports: [
     CommonModule,

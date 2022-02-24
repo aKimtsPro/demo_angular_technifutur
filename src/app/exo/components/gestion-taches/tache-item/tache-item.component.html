@@ -1,0 +1,16 @@
+
+<div class="tache-item" [ngStyle]="{'background-color': tache.color ? tache.color : 'rgb(245, 245, 130)' }">
+    <button class="task-up" 
+    (click)="move(true)" 
+    [disabled]="isFirst">
+        up
+    </button>
+
+    <p>{{ tache.nom }} - créé le {{tache.date_creation | date:'dd-MM-YY'}}</p>
+
+    <button class="task-down" 
+    (click)="move(false)" 
+    [disabled]="isLast">
+        down
+    </button>
+</div>
