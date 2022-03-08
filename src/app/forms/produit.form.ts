@@ -1,23 +1,14 @@
-import { AbstractControl, ValidationErrors, Validators } from "@angular/forms";
+import { AbstractControl, AbstractControlOptions, ValidationErrors, ValidatorFn, Validators } from "@angular/forms";
+import { multipleOf } from "./custom.validator";
+
 
 export const PRODUIT_INSERT_FORM = {
-    'marque': ['', [Validators.required, Validators.minLength(1), Validators.maxLength(30)]],
-    'modele': [undefined,[Validators.minLength(1), Validators.maxLength(30)]],
+    'marque': ['', [Validators.required, Validators.minLength(2), Validators.maxLength(30)]],
+    'modele': [undefined,[Validators.minLength(2), Validators.maxLength(30)]],
     'prix' : [0, [Validators.required, Validators.min(0)]],
-    'stock' : [1, [Validators.min(1), Validators.max(99), pair]],
+    'stock' : [1, [Validators.min(1), Validators.max(99), multipleOf(2)]],
     'en_vente' : [true]
 };
-
-function pair(control: AbstractControl) : ValidationErrors | null {
-    if( !control.value || control.value % 2 == 0 )
-        return null;
-
-    return {
-        pair: {
-            message: 'devrait être pair'
-        }
-    }
-}
 
 export function priceDoubleStock(control: AbstractControl) : ValidationErrors | null {
     const prix = control.value.prix;
@@ -34,3 +25,19 @@ export function priceDoubleStock(control: AbstractControl) : ValidationErrors | 
         }
     }
 }
+
+export function modeleMarqueValidator(control: AbstractControl) : ValidationErrors | null {
+    const modele = control.value.modele as string | undefined;
+    const marque = <string | undefined> control.value.marque;
+
+    if( !marque || modele?.startsWith(marque.substring(0,2)) )
+        return null;
+
+    return {
+        'modele-marque-error': {
+            modele: modele,
+            marque: marque
+        }
+    }
+}
+

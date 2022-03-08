@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
-import { priceDoubleStock, PRODUIT_INSERT_FORM } from 'src/app/forms/produit.form';
+import { ProduitForm } from 'src/app/forms/experimental.form';
+import { modeleMarqueValidator, priceDoubleStock, PRODUIT_INSERT_FORM } from 'src/app/forms/produit.form';
 import { Produit } from 'src/app/models/produit.model';
 
 @Component({
@@ -24,8 +25,9 @@ export class InsertProduitFormComponent implements OnInit {
 
   constructor(builder: FormBuilder) {
     this.produitInsertForm = builder.group(PRODUIT_INSERT_FORM, {
-      validators: priceDoubleStock
+      validators: [ priceDoubleStock, modeleMarqueValidator ]
     });
+    // builder.group(...ProduitForm.insert)
   }
 
   ngOnInit(): void {
@@ -33,6 +35,7 @@ export class InsertProduitFormComponent implements OnInit {
 
   onSubmit(){
     console.log(this.produitInsertForm)
+
     if( this.produitInsertForm.valid ){
       this.produitSubmitted.emit({
         'marque': this.produitInsertForm.value.marque,
