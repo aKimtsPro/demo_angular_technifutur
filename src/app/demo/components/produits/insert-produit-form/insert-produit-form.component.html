@@ -5,6 +5,9 @@
     <div>
         <label for="produit-marque">Marque</label><br>
         <input type="text" id="produit-marque" formControlName="marque">
+        <p *ngIf="produitInsertForm.controls['marque'].errors?.['required']" style="color: red;">
+            requis
+        </p>
     </div>
     <div>
         <label for="produit-modele">Modele</label><br>
@@ -18,6 +21,9 @@
     <div>
         <label for="produit-stock">Stock</label><br>
         <input type="number" id="produit-stock" formControlName="stock">
+        <p *ngIf="produitInsertForm.controls['stock'].errors?.['pair']" style="color: red;">
+            {{ produitInsertForm.controls['stock'].errors?.['pair'].message }}
+        </p>
     </div>
 
     <div>
@@ -26,5 +32,9 @@
     </div>
 
     <button type="submit">insérer</button>
+
+    <p *ngIf="produitInsertForm.errors?.['priceDoubleStock']" style="color: red;">
+        {{ produitInsertForm.errors?.['priceDoubleStock'].message }}
+    </p>
 
 </form>
