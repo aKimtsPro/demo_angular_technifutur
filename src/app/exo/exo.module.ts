@@ -19,6 +19,10 @@ import { FormsComponent } from './components/forms/forms.component';
 import { GestionTachesComponent } from './components/gestion-taches/gestion-taches.component';
 import { CreerTacheComponent } from './components/gestion-taches/creer-tache/creer-tache.component';
 import { TacheItemComponent } from './components/gestion-taches/tache-item/tache-item.component';
+import { PanierComponent } from './components/panier/panier.component';
+import { MenuComponent } from './components/menu/menu.component';
+import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
+import { PanierItemComponent } from './components/panier/panier-item/panier-item.component';
 
 
 
@@ -39,7 +43,11 @@ import { TacheItemComponent } from './components/gestion-taches/tache-item/tache
     FormsComponent,
     GestionTachesComponent,
     CreerTacheComponent,
-    TacheItemComponent
+    TacheItemComponent,
+    PanierComponent,
+    MenuComponent,
+    MenuItemComponent,
+    PanierItemComponent
   ],
   imports: [
     CommonModule,
