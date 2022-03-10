@@ -15,3 +15,14 @@
     <button type="submit">envoyer</button>
 
 </form>
+
+
+<div>
+    <h4>CHANGER COULEUR</h4>
+    <button (click)="onSwap()">changer</button>
+</div>
+
+<div>
+    <h4>CHOISIR COULEUR</h4>
+    <input type="color" [(ngModel)]="color" (change)="onChooseColor()">
+</div>

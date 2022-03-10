@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
 import { PanierItem } from '../models/panier-item.model';
 import { Plat } from '../models/plat.model';
 
@@ -8,6 +9,8 @@ import { Plat } from '../models/plat.model';
 export class PanierService {
 
   private list: PanierItem[] = [];
+
+  panierChanged = new Subject<PanierItem[]>();
 
   constructor() { }
 
@@ -22,6 +25,9 @@ export class PanierService {
         plat: plat,
         qtt: 1
       });
+
+      this.triggerPanierChanged();
+
   }
 
   removeFromCart(plat: Plat, qtt?: number){
@@ -31,6 +37,8 @@ export class PanierService {
     if(item && !qtt){
       const index = this.list.indexOf(item);
       this.list.splice(index,1);
+
+      this.triggerPanierChanged();
     }
     else if (item && qtt) {
       item.qtt -= qtt;
@@ -38,12 +46,18 @@ export class PanierService {
         const index = this.list.indexOf(item);
         this.list.splice(index,1);
       }
+
+      this.triggerPanierChanged()
     }
   }
 
   getPanier(): PanierItem[]{
     return this.list.slice();
     // return [...this.list];
+  }
+
+  triggerPanierChanged(){
+    this.panierChanged.next(this.getPanier())
   }
 
 }

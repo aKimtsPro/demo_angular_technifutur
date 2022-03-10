@@ -10,6 +10,7 @@ import { FormsComponent } from './components/forms/forms.component';
 import { GestionTachesComponent } from './components/gestion-taches/gestion-taches.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { ObjectifComponent } from './components/objectif/objectif.component';
 
 const routes: Routes = [
     { path: "", component: ExoComponent, children: [
@@ -22,6 +23,7 @@ const routes: Routes = [
         { path:"tache", component: GestionTachesComponent},
         { path:"panier", component: PanierComponent},
         { path:"menu", component: MenuComponent},
+        { path:"objectif", component: ObjectifComponent},
     ]}
 ];
 

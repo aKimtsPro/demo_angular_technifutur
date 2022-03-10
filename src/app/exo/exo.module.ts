@@ -23,6 +23,7 @@ import { PanierComponent } from './components/panier/panier.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { MenuItemComponent } from './components/menu/menu-item/menu-item.component';
 import { PanierItemComponent } from './components/panier/panier-item/panier-item.component';
+import { ObjectifComponent } from './components/objectif/objectif.component';
 
 
 
@@ -47,7 +48,8 @@ import { PanierItemComponent } from './components/panier/panier-item/panier-item
     PanierComponent,
     MenuComponent,
     MenuItemComponent,
-    PanierItemComponent
+    PanierItemComponent,
+    ObjectifComponent
   ],
   imports: [
     CommonModule,

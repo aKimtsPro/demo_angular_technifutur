@@ -13,6 +13,7 @@ export class PanierComponent implements OnInit {
 
   constructor(private service: PanierService) { 
     this.list = service.getPanier();
+    service.panierChanged.subscribe((panier) => this.list = panier);
   }
 
   ngOnInit(): void {
@@ -20,7 +21,7 @@ export class PanierComponent implements OnInit {
 
   onDelete(item: PanierItem){
     this.service.removeFromCart(item.plat);
-    this.list = this.service.getPanier();
+    // this.list = this.service.getPanier(); // TODO: effectivement on n'en a maintenant plus besoin
   }
 
 }
