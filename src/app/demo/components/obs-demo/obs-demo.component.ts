@@ -16,9 +16,10 @@ export class ObsDemoComponent implements OnInit {
     obs.next(1);
     obs.next(2);
     obs.next(3);
+    // obs.error("je m'arrete la");
     obs.next(4);
-    obs.next(5);
     obs.complete();
+    obs.next(5);
   })
 
   constructor() { }
@@ -27,7 +28,11 @@ export class ObsDemoComponent implements OnInit {
   }
 
   subToColdObs(){
-    this.$cold_obs.subscribe(console.log)
+    this.$cold_obs.subscribe({
+      next: console.log,
+      error: (err) => console.error(err),
+      complete: () => console.log("-- COMPLETED --")
+    })
   }
 
   subToHotObs(){
