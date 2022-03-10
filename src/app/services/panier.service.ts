@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject } from 'rxjs';
+import { BehaviorSubject, Observable, of, ReplaySubject, Subject } from 'rxjs';
 import { PanierItem } from '../models/panier-item.model';
 import { Plat } from '../models/plat.model';
 
@@ -10,11 +10,15 @@ export class PanierService {
 
   private list: PanierItem[] = [];
 
-  panierChanged = new Subject<PanierItem[]>();
+  private panierChanged = new BehaviorSubject<PanierItem[]>(this.list.slice());
+  // private panierChanged = new Subject<PanierItem[]>();
 
   constructor() { }
 
   addToCart(plat: Plat){
+
+    let obs : Observable<string> = of('ok');
+
     const item = this.list
       .find(value => value.plat.nom == plat.nom);
 
@@ -26,7 +30,7 @@ export class PanierService {
         qtt: 1
       });
 
-      this.triggerPanierChanged();
+    this.triggerPanierChanged();
 
   }
 
@@ -58,6 +62,10 @@ export class PanierService {
 
   triggerPanierChanged(){
     this.panierChanged.next(this.getPanier())
+  }
+
+  getPanierChanged(): Observable<PanierItem[]>{
+    return this.panierChanged;
   }
 
 }

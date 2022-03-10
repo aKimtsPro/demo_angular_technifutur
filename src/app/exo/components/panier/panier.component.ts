@@ -9,11 +9,11 @@ import { PanierService } from 'src/app/services/panier.service';
 })
 export class PanierComponent implements OnInit {
 
-  list: PanierItem[];
+  list!: PanierItem[];
 
   constructor(private service: PanierService) { 
-    this.list = service.getPanier();
-    service.panierChanged.subscribe((panier) => this.list = panier);
+    // this.list = service.getPanier();
+    service.getPanierChanged().subscribe((panier) => this.list = panier);
   }
 
   ngOnInit(): void {

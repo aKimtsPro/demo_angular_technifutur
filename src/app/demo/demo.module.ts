@@ -17,6 +17,7 @@ import { ProduitsComponent } from './components/produits/produits.component';
 import { InsertProduitFormComponent } from './components/produits/insert-produit-form/insert-produit-form.component';
 import { ListProduitsComponent } from './components/produits/list-produits/list-produits.component';
 import { ListProduitsItemComponent } from './components/produits/list-produits/list-produits-item/list-produits-item.component';
+import { ObsDemoComponent } from './components/obs-demo/obs-demo.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ListProduitsItemComponent } from './components/produits/list-produits/l
     ProduitsComponent,
     InsertProduitFormComponent,
     ListProduitsComponent,
-    ListProduitsItemComponent
+    ListProduitsItemComponent,
+    ObsDemoComponent
   ],
   imports: [
     CommonModule,
