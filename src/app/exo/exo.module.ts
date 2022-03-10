@@ -25,6 +25,7 @@ import { MenuItemComponent } from './components/menu/menu-item/menu-item.compone
 import { PanierItemComponent } from './components/panier/panier-item/panier-item.component';
 import { ObjectifComponent } from './components/objectif/objectif.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PlatFormComponent } from './components/menu/plat-form/plat-form.component';
 
 
 
@@ -50,15 +51,15 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     MenuItemComponent,
     PanierItemComponent,
-    ObjectifComponent
+    ObjectifComponent,
+    PlatFormComponent
   ],
   imports: [
     CommonModule,
     FormsModule,
     ExoRoutingModule,
     SharedModule,
-    ReactiveFormsModule,
-    HttpClientModule
+    ReactiveFormsModule
   ]
 })
 export class ExoModule { }

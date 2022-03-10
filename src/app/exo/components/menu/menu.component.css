@@ -1,7 +1,15 @@
-.menu-container {
+.menu-display {
     display: flex;
 }
 
-.menu-container > div {
+.menu-display > div {
     width: 50%;
+}
+
+.menu-component {
+    display: flex;
+}
+
+.menu-component > div {
+    width: 200px;
 }

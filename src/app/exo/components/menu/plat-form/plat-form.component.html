@@ -1,0 +1,22 @@
+<form [formGroup]="platForm" (ngSubmit)="onSubmit()">
+    <div>
+        <label for="">nom</label>
+        <input type="text" placeholder="nom" formControlName="nom">
+    </div>
+
+    <div>
+        <label for="">type</label>
+        <select placeholder="type" formControlName="type">
+            <option value="plat">plat</option>
+            <option value="entree">entree</option>
+            <option value="dessert">dessert</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="">prix</label>
+        <input type="number" placeholder="prix" formControlName="prix">
+    </div>
+
+    <button type="submit">envoyer</button>
+</form>
