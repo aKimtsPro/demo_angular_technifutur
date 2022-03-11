@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Plat } from '../models/plat.model';
 
 @Injectable({
@@ -11,10 +12,16 @@ export class PlatService {
 
   constructor(private client: HttpClient) { }
 
-  getPlats(){
+  // GET - DELETE
+  getPlats(): Observable<Plat[]>{
     return this.client.get<Plat[]>(this.BASE_URL)
   }
 
+  getPlat(id: number){
+    return this.client.get<Plat>(this.BASE_URL+'/'+id)
+  }
+
+  // POST - PUT - PATCH
   onPlatSent(plat: Plat){
     return this.client.post<Plat>(this.BASE_URL, plat)
   }

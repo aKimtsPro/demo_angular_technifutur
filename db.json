@@ -1,12 +1,6 @@
 {
   "plats": [
     {
-      "id": 1,
-      "nom": "pate",
-      "type": "plat",
-      "prix": 8
-    },
-    {
       "id": 2,
       "nom": "pizza",
       "type": "plat",

@@ -26,6 +26,7 @@ import { PanierItemComponent } from './components/panier/panier-item/panier-item
 import { ObjectifComponent } from './components/objectif/objectif.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PlatFormComponent } from './components/menu/plat-form/plat-form.component';
+import { PlatComponent } from './components/menu/plat/plat.component';
 
 
 
@@ -52,7 +53,8 @@ import { PlatFormComponent } from './components/menu/plat-form/plat-form.compone
     MenuItemComponent,
     PanierItemComponent,
     ObjectifComponent,
-    PlatFormComponent
+    PlatFormComponent,
+    PlatComponent
   ],
   imports: [
     CommonModule,

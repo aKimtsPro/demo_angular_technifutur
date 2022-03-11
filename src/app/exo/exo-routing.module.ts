@@ -11,6 +11,7 @@ import { GestionTachesComponent } from './components/gestion-taches/gestion-tach
 import { PanierComponent } from './components/panier/panier.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ObjectifComponent } from './components/objectif/objectif.component';
+import { PlatComponent } from './components/menu/plat/plat.component';
 
 const routes: Routes = [
     { path: "", component: ExoComponent, children: [
@@ -24,6 +25,7 @@ const routes: Routes = [
         { path:"panier", component: PanierComponent},
         { path:"menu", component: MenuComponent},
         { path:"objectif", component: ObjectifComponent},
+        { path:"plat/:id", component: PlatComponent},
     ]}
 ];
 

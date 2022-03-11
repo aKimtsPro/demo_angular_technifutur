@@ -1,0 +1,22 @@
+
+
+
+<ng-template #loading>
+    <div>
+        <p>loading...</p>
+    </div>
+</ng-template>
+
+<div *ngIf="plat; else loading">
+    <h3>Detail du plat d'id: {{plat.id}}</h3>
+    <dl>
+        <dt>nom</dt>
+        <dd>{{plat.nom}}</dd>
+    
+        <dt>type</dt>
+        <dd>{{plat.type}}</dd>
+        
+        <dt>prix</dt>
+        <dd>{{plat.prix | currency:'EUR'}}</dd>
+    </dl>
+</div>
