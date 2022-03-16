@@ -11,12 +11,10 @@ import { ConnexionService } from 'src/app/services/connexion.service';
 export class AccueilComponent implements OnInit {
 
   connexionForm: FormGroup;
-  color!: string;
 
   constructor(
     builder: FormBuilder, 
-    private service: ConnexionService,
-    private swapService: ColorSwapService
+    private service: ConnexionService
   ) {
     this.connexionForm = builder.group({
       username: [''],
@@ -34,12 +32,9 @@ export class AccueilComponent implements OnInit {
       alert("username/password invalide(s)")
   }
 
-  onSwap(){
-    this.swapService.swap();
-  }
 
-  onChooseColor(){
-    this.swapService.swapWithColor(this.color);
+  isConnected(){
+    return this.service.isConnected;
   }
 
 }

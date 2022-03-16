@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
+import { ChangeColorsComponent } from "./components/change-colors/change-colors.component";
 import { DemoBindingComponent } from "./components/demo-binding/demo-binding.component";
 import { DemoCommuComponent } from "./components/demo-commu/demo-commu.component";
 import { DemoDirectiveComponent } from "./components/demo-directive/demo-directive.component";
@@ -8,6 +9,7 @@ import { DemoPipeComponent } from "./components/demo-pipe/demo-pipe.component";
 import { ObsDemoComponent } from "./components/obs-demo/obs-demo.component";
 import { ProduitsComponent } from "./components/produits/produits.component";
 import { DemoComponent } from "./demo.component";
+import { ConnectionGuard } from "./guards/connection.guard";
 
 
 const routes: Routes = [
@@ -19,6 +21,7 @@ const routes: Routes = [
         { path: 'forms', component: DemoFormsComponent },
         { path: 'produits', component: ProduitsComponent },
         { path: 'obs', component: ObsDemoComponent },
+        { path: 'color', component: ChangeColorsComponent, canActivate: [ ConnectionGuard ] },
     ] }
 ];
 

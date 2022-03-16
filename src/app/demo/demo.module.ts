@@ -18,6 +18,7 @@ import { InsertProduitFormComponent } from './components/produits/insert-produit
 import { ListProduitsComponent } from './components/produits/list-produits/list-produits.component';
 import { ListProduitsItemComponent } from './components/produits/list-produits/list-produits-item/list-produits-item.component';
 import { ObsDemoComponent } from './components/obs-demo/obs-demo.component';
+import { ChangeColorsComponent } from './components/change-colors/change-colors.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ObsDemoComponent } from './components/obs-demo/obs-demo.component';
     InsertProduitFormComponent,
     ListProduitsComponent,
     ListProduitsItemComponent,
-    ObsDemoComponent
+    ObsDemoComponent,
+    ChangeColorsComponent
   ],
   imports: [
     CommonModule,

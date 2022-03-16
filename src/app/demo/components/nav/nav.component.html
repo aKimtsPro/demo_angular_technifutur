@@ -20,4 +20,7 @@
     <div class="nav-link">
         <a routerLink="./obs">observables</a>
     </div>    
+    <div class="nav-link" *ngIf="isConnected()">
+        <a routerLink="./color">couleur</a>
+    </div>    
 </div>
