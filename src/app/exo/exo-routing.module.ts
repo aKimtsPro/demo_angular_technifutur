@@ -12,6 +12,11 @@ import { PanierComponent } from './components/panier/panier.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { ObjectifComponent } from './components/objectif/objectif.component';
 import { PlatComponent } from './components/menu/plat/plat.component';
+import { InputComponent } from './components/parite/input/input.component';
+import { ImpairComponent } from './components/parite/impair/impair.component';
+import { PairComponent } from './components/parite/pair/pair.component';
+import { ImpairGuard } from './guards/impair.guard';
+import { PairGuard } from './guards/pair.guard';
 
 const routes: Routes = [
     { path: "", component: ExoComponent, children: [
@@ -26,6 +31,9 @@ const routes: Routes = [
         { path:"menu", component: MenuComponent},
         { path:"objectif", component: ObjectifComponent},
         { path:"plat/:id", component: PlatComponent},
+        { path:"parite", component: InputComponent },
+        { path:"impair/:nbr", component: ImpairComponent, canActivate: [ ImpairGuard ] },
+        { path:"pair/:nbr", component: PairComponent, canActivate: [ PairGuard ] },
     ]}
 ];
 

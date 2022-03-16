@@ -9,7 +9,12 @@ import { DemoPipeComponent } from "./components/demo-pipe/demo-pipe.component";
 import { ObsDemoComponent } from "./components/obs-demo/obs-demo.component";
 import { ProduitsComponent } from "./components/produits/produits.component";
 import { DemoComponent } from "./demo.component";
-import { ConnectionGuard } from "./guards/connection.guard";
+import { ConnectionGuard } from "../exo/guards/connection.guard";
+import { ImpairGuard } from "../exo/guards/impair.guard";
+import { PairGuard } from "../exo/guards/pair.guard";
+import { ImpairComponent } from "../exo/components/parite/impair/impair.component";
+import { InputComponent } from "../exo/components/parite/input/input.component";
+import { PairComponent } from "../exo/components/parite/pair/pair.component";
 
 
 const routes: Routes = [

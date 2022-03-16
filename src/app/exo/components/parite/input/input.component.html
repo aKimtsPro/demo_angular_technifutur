@@ -1,0 +1,13 @@
+<h3>Exo Guards</h3>
+
+<div id="parite-control">
+    <div class="input-parite-container">
+        <input type="number" [(ngModel)]="nombre">
+    </div>
+    
+    <div class="btn-parite-container">
+        <button [routerLink]="['..','pair', nombre]">pair</button>
+        <button [routerLink]="['..','impair', nombre]">impair</button>
+    </div>
+</div>
+

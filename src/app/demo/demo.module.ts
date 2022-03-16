@@ -37,7 +37,7 @@ import { ChangeColorsComponent } from './components/change-colors/change-colors.
     ListProduitsComponent,
     ListProduitsItemComponent,
     ObsDemoComponent,
-    ChangeColorsComponent
+    ChangeColorsComponent,
   ],
   imports: [
     CommonModule,
