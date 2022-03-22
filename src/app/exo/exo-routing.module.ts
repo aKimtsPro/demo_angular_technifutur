@@ -17,6 +17,7 @@ import { ImpairComponent } from './components/parite/impair/impair.component';
 import { PairComponent } from './components/parite/pair/pair.component';
 import { ImpairGuard } from './guards/impair.guard';
 import { PairGuard } from './guards/pair.guard';
+import { PlatAsyncComponent } from './components/menu/plat-async/plat-async.component';
 
 const routes: Routes = [
     { path: "", component: ExoComponent, children: [
@@ -31,6 +32,7 @@ const routes: Routes = [
         { path:"menu", component: MenuComponent},
         { path:"objectif", component: ObjectifComponent},
         { path:"plat/:id", component: PlatComponent},
+        { path:"plat-async/:id", component: PlatAsyncComponent},
         { path:"parite", component: InputComponent },
         { path:"impair/:nbr", component: ImpairComponent, canActivate: [ ImpairGuard ] },
         { path:"pair/:nbr", component: PairComponent, canActivate: [ PairGuard ] },

@@ -30,6 +30,7 @@ import { PlatComponent } from './components/menu/plat/plat.component';
 import { InputComponent } from './components/parite/input/input.component';
 import { ImpairComponent } from './components/parite/impair/impair.component';
 import { PairComponent } from './components/parite/pair/pair.component';
+import { PlatAsyncComponent } from './components/menu/plat-async/plat-async.component';
 
 
 
@@ -60,7 +61,8 @@ import { PairComponent } from './components/parite/pair/pair.component';
     PlatComponent,
     InputComponent,
     ImpairComponent,
-    PairComponent
+    PairComponent,
+    PlatAsyncComponent
   ],
   imports: [
     CommonModule,

@@ -5,7 +5,7 @@
     </div>
 </ng-template>
 
-<div *ngIf="plat; else loading">
+<div *ngIf="$plat | async as plat ; else loading">
     <h3>Detail du plat d'id: {{plat.id}}</h3>
     <dl>
         <dt>nom</dt>
